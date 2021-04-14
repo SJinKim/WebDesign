@@ -1,0 +1,25 @@
+body {
+  background-color: white;
+}
+
+.box {
+  width: 320px;
+  margin: 100px auto;
+  background: white;
+  border-radius: 12px;
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.box .heading {
+  background: #7800CF;
+  border-radius: 7px 7px 0px 0px;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.box .faqs {
+  padding: 10px 20px;
+}
+/*# sourceMappingURL=style.css.map */

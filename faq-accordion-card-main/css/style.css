@@ -1,0 +1,92 @@
+/* set variables */
+:root{
+    --text-blue: hsl(238, 29%, 16%);
+    --text-red: hsl(14, 88%, 65%);
+    --text-xdrkblue: hsl(237, 12%, 33%);
+    --text-drkblue: hsl(240, 6%, 50%);
+    --divider-blue: hsl(240, 5%, 91%);
+    --gradient-violet: hsl(273, 75%, 66%);
+    --gradient-blue: hsl(240, 73%, 65%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+/* for all boxes */
+*, *::before, *::after {box-sizing: inherit;}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 3rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(var(--gradient-violet), var(--gradient-blue));
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 2rem;
+    margin: 3rem;
+}
+
+#FAQ {
+    text-transform: uppercase;
+}
+
+.card__image img {
+    width: 100%;
+    height: auto;
+    max-width: 25rem;
+}
+
+
+.card__text{
+
+}
+
+/* 
+16px = 1rem/em 
+for desktop.
+*/
+@media(min-width: 56em) {
+    .card {
+        position: relative;
+        display: flex;
+        margin: 6rem auto;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: -13% center; /*left horizontally, center vertically*/
+
+        padding-right: 2rem;
+    }
+
+    .card__image, .card__text {
+        flex: 1;
+    }
+
+    .card__image {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /*if position set to absolute -> parent class must be positio: relative*/
+    .card__box {
+        display: block;
+        position: absolute;
+        top: 57%;
+        left: 0;
+        transform: translateX(-50%) translateY(-50%);
+        /*element to be on top, because it came first then card__img*/
+        z-index: 1;
+    }
+
+    .card__image img {
+        transform: translateX(-4rem);
+    }
+
+}
+
