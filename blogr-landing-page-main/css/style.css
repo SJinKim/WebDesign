@@ -1,0 +1,152 @@
+/*
+font-family: 'Overpass', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+Font size: 16px
+*/
+
+:root {
+    --pr-light-red: hsl(356, 100%, 66%);
+    --pr-very-light-red: hsl(355, 100%, 74%);
+    --ms-wrap-margin: hsl(208, 49%, 24%);
+
+    --nt-white: hsl(0, 0%, 100%);
+    --nt-gray-blue: hsl(240, 2%, 79%);
+    --nt-drk-gray-blue: hsl(207, 13%, 34%);
+    --nt-black-blue: hsl(240, 10%, 16%);
+
+    /*background mobile*/
+    --gr-very-light-red: hsla(13, 100%, 72%, 0.9);
+    --gr-light-red: hsla(353, 100%, 62%, 0.9);
+
+    /*background desktop*/
+    --gr-very-drk-gray-blue: hsl(237, 17%, 21%);
+    --gr-very-drk-des-blue: hsl(237, 23%, 32%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+}
+
+/* header
+===================== */
+
+header {
+    padding-top: 50px;
+    position: absolute;
+    left: 0;
+}
+
+header::after {
+    content:'';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    padding-left: 120px;
+    float: left;
+}
+
+.nav-left {
+    margin-left: 3rem;
+    float: left;
+}
+
+.nav-right {
+    margin-left: 69rem;
+    float: right;
+}
+
+.nav-left ul, .nav-right ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-left li, .nav-right li {
+    display: inline-block;
+    margin: 1em;
+
+    position: relative;
+}
+
+.nav-left a:after {
+    content: '';
+    padding-left: 0.58rem;
+    margin-left: 5px;
+    background-image: url('../images/icon-arrow-light.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    font-size: .8rem;
+    color: var(--nt-white);
+}
+
+.nav-right .button {
+    color: var(--pr-very-light-red);
+    font-weight: 600;
+}
+
+.button {
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 5em;
+    border-color: var(--nt-white);
+    padding: .5em .5em;
+    color: var(--nt-white);
+    background-color: var(--nt-white);
+}
+
+.button-accent {
+    color: var(--pr-very-light-red);
+    font-weight: 600;
+}
+
+.button-transperant {
+    background-color: transparent;
+}
+
+
+/* home-hero
+========================*/
+
+.home-hero {
+    background: linear-gradient(var(--gr-light-red),var(--gr-very-light-red)),
+    url('../images/bg-pattern-intro.svg');
+    background-position: 30%;
+    border-radius: 0 0 0 80px;
+    padding: 10em 0;
+}
+
+.home-hero h1 {
+    color: var(--nt-white);
+    font-weight: 600;
+    font-size: 50px;
+    margin: 3rem 0 0;
+}
+
+.home-hero h3 {
+    margin: 0.5rem 0 2rem 0;
+    color: var(--nt-white);
+    font-weight: 300;
+}
+
+.home-hero a {
+    margin: .2em;
+}
+
+/* moblie 
+*/
+@media (max-width: 24rem) {
+
+}
