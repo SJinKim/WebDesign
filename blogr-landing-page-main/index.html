@@ -23,24 +23,36 @@
 <body>
   <header>
     <img src="images/logo.svg" alt="Blogr logo" class="logo">
-    <nav class="nav-left">
-      <ul>
-        <li class="one"><a href="#">Product</a></li>
-        <li><a href="#">Company</a></li>
-        <li><a href="#">Connect</a></li>
-      </ul>
+    <input type="checkbox" name="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <nav class="navbar">
+        <ul>
+          <span class="arrow__needed">
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Connect</a></li>
+          </span>
+          <span class="divide" alt="dividing line">
+          <li><a href="#">Login</a></li>
+          </span>
+          <li><a href="#" class="button button-mobile">Sign Up</a></li>
+        </ul>
     </nav>
-    <nav class="nav-right">
-      <li><a href="#">Login</a></li>
-      <li><a href="#" class="button button-accent">Sign Up</a></li>
-    </nav>
+    <label for="navbar-toggle" class="navbar-toggle-label">
+      <span class="hamburger"></span>
+    </label>
   </header>
-
+  
   <section class="home-hero">
-    <h1>A modern publishing platform</h1>
-      <h3>Grow your audience and build your online brand</h3>
-      <a href="#" class="button button-accent">Start for Free</a>
-      <a href="#" class="button button-transperant">Learn More</a>
+    <div class="container">
+      <h1 class="title">A modern
+        <span>publishing platform</span>
+      </h1>
+        <h3 class="slogan">Grow your audience and build your 
+          <span>online brand</span>
+        </h3>
+        <a href="#" class="button button-accent">Start for Free</a>
+        <a href="#" class="button button-transperant">Learn More</a>
+    </div>
   </section>
 
   <section class="home-about-design">
