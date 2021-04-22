@@ -366,16 +366,18 @@ hamburger menu
   border-radius: 0 9rem 0 0;
   padding-bottom: 5.18em;
   margin-top: 6.37em;
+  margin-bottom: 0;
 }
 
 .logo {
   padding: 0;
   margin-top: 4.67em;
-  margin-left: 2.7em;
+  margin-left: 1em;
 }
 
 .col-1 ul {
   list-style-type: none;
+  margin-right: 2em;
 }
 
 .last-part li {
@@ -386,6 +388,10 @@ hamburger menu
 .col-1 a {
   text-decoration: none;
   color: white;
+}
+
+.attribution {
+  position: absolute;
 }
 
 /* set desktop version
