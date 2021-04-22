@@ -7,20 +7,20 @@ Font size: 16px
 :root {
   --pr-light-red: hsl(356, 100%, 66%);
   --pr-very-light-red: hsl(355, 100%, 74%);
-  --ms-wrap-margin: hsl(208, 49%, 24%);
+  --pr-very-drk-blue: hsl(208, 49%, 24%);
 
   --nt-white: hsl(0, 0%, 100%);
   --nt-gray-blue: hsl(240, 2%, 79%);
   --nt-drk-gray-blue: hsl(207, 13%, 34%);
   --nt-black-blue: hsl(240, 10%, 16%);
 
-  /*background mobile*/
+  /*background mobile nav*/
   --gr-very-light-red: hsla(13, 100%, 72%, 0.9);
   --gr-light-red: hsla(353, 100%, 62%, 0.9);
 
-  /*background desktop*/
-  --gr-very-drk-gray-blue: hsl(237, 17%, 21%);
-  --gr-very-drk-des-blue: hsl(237, 23%, 32%);
+  /*background body*/
+  --gr-very-drk-gray-blue: hsla(237, 17%, 21%, 0.9);
+  --gr-very-drk-des-blue: hsla(237, 23%, 32%, 0.9);
 }
 
 *,
@@ -34,6 +34,8 @@ body {
   font-family: 'Overpass', sans-serif;
   text-align: center;
   font-size: 16px;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
 /*
@@ -120,8 +122,9 @@ header {
 }
 
 .logo {
+  /*border: 1px solid black;*/
   position: inherit;
-  top: 0;
+  top: -4em;
   left: 0;
   margin-top: 1.05rem;
   margin-left: 1.5rem;
@@ -176,7 +179,7 @@ header {
   margin-top: 4rem;
   /*border: 1px solid yellow; for positioning purpose*/
   border-radius: 5px;
-  left: 10%;
+  left: 16%;
 }
 
 .navbar-toggle {
@@ -237,20 +240,177 @@ hamburger menu
     ),
     url('/images/bg-pattern-intro.svg') no-repeat center;
 
-  background-position: 32% 34%;
+  background-position: 32% 37%;
   background-size: 330%;
-  /* background-position: 25% 52%; for desktop ver */
   /*dont forget to give it a padding!!!*/
   padding: 10em 0;
   border-bottom-left-radius: 5em;
 }
 
+/* home-about
+=================================
+*/
+
+.home-about-design h2 {
+  margin-top: 6.625rem;
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--pr-very-drk-blue);
+}
+
+.home-design-img {
+  margin-top: 3.5rem;
+  max-width: 100%;
+}
+
+.home-design {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-design h3 {
+  display: flex;
+  flex-direction: column;
+  color: var(--pr-very-drk-blue);
+  font-size: 27px;
+}
+
+.home-design p {
+  margin: 0;
+  padding: 0;
+  max-width: 30ch;
+  color: var(--nt-drk-gray-blue);
+}
+
+/* home-about-infrastructure
+========================================
+*/
+
+.phones {
+  position: absolute;
+  top: 123em;
+}
+
+.home-infra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.state-infra {
+  margin-top: 17.31rem;
+  background: linear-gradient(
+      to top,
+      var(--gr-very-drk-des-blue),
+      var(--gr-very-drk-gray-blue)
+    ),
+    url('/images/bg-pattern-circles.svg') no-repeat center;
+  padding: 11em 0;
+  background-position: 0 37%;
+  color: var(--nt-white);
+  border-radius: 0 8rem 0 10rem;
+  background-position: center;
+  background-position-y: 164%;
+}
+
+.state-infra h2 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.state-infra p {
+  font-weight: 300;
+  max-width: 30ch;
+  border: 1px solid palevioletred;
+  margin-left: 4.3em; /*hard coded. hmm koennte besser sein wahrscheinlich*/
+}
+
+/* home-about-last
+==================================================
+*/
+
+.home-last {
+  /*border: 1px solid black;*/
+  margin-top: 5em;
+}
+
+.heading-text-last {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: var(--pr-very-drk-blue);
+  font-size: 27px;
+}
+
+.home-last p {
+  display: flex;
+  max-width: 30ch;
+  margin-left: 4.3em;
+}
+
+/* footer
+=================================================
+*/
+
+.last-part {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  background: var(--nt-black-blue);
+  border-radius: 0 9rem 0 0;
+  padding-bottom: 5.18em;
+  margin-top: 6.37em;
+}
+
+.logo {
+  padding: 0;
+  margin-top: 4.67em;
+  margin-left: 2.7em;
+}
+
+.col-1 ul {
+  list-style-type: none;
+}
+
+.last-part li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.col-1 a {
+  text-decoration: none;
+  color: white;
+}
+
 /* set desktop version
-===========================================================
+===================================================
 */
 @media (min-width: 600px) {
+  /* home-hero
+========================*/
   .home-hero {
     background-size: auto;
     background-position: 25% 52%;
+  }
+
+  /* home-about
+=================================
+*/
+  .home-design {
+    border: 1px solid black;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .home-design p {
+    margin: 1em 0 0 0;
+    max-width: 65ch;
   }
 }
