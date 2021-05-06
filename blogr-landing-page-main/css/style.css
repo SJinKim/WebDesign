@@ -150,7 +150,6 @@ header {
   margin-top: 30px;
   width: 100%;
   padding: 2.1rem;
-  border: 1px solid blue;
 }
 
 .logo {
@@ -160,6 +159,10 @@ header {
   left: 0;
   margin-top: 1.05rem;
   margin-left: 1.5rem;
+}
+
+.navbar {
+  display: none;
 }
 
 .navbar ul {
@@ -203,10 +206,6 @@ header {
   text-decoration: none;
 }
 
-.navbar {
-  display: none;
-}
-
 /*so that we can click on it*/
 .navbar-toggle {
   display: none;
@@ -234,12 +233,6 @@ header {
 }
 
 @media (min-width: 52rem) {
-  .header {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-  }
-
   .logo {
     position: inherit;
     border: 1px solid red;
@@ -250,7 +243,34 @@ header {
     display: none;
   }
 
-  .nav;
+  .navbar {
+    display: flex;
+    border: 2px solid black;
+  }
+
+  .navbar ul {
+    border: 1px solid green;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .navbar li {
+    float: right;
+    margin-right: 1.5rem;
+  }
+
+  .navbar a {
+    color: var(--nt-white);
+  }
+
+  .navbar .divide a::before {
+    display: none;
+  }
+
+  .navbar .arrow__needed a::after {
+    background-image: url('/images/icon-arrow-light.svg');
+  }
 }
 
 /*
